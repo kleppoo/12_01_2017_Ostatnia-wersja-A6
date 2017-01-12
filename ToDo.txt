@@ -1,0 +1,48 @@
+28.11.2016
+Sprawdzone:
+1. ladnie nawiazuje ponowne polaczenie po TCP przetesotwane.
+
+ToDo
+1. Nie przetesowane naiwiazenie nowego polaczenia po GPRS i IP.
+2. Nie sprawdzono co bedzie jesli nie ma karty SIM.
+3. Brakuje polecenie wprowadzenia nr PIN!!!
+4. Nie dziaBa na karcie Play, brak mozliwoci nawiazanie polaczenia po TCP!!!!
+
+
+08.11.2016 ToDo:
+0. Zrobienie Gita										- Done
+1. Sprawdzic odbior ramki RMC z GPS						- Done
+1a. Obsluga pinów wlacz modem, reset modemu.			- Done (nie testowane)
+2. obsluga bledw i problem w transmisji GSM i TCP/IP
+2a. zmniejszenie poboru mocy przez modem 		- dodane sterowanie
+linia trzeba przelutowac do pinu obok na plytce od modemu
+
+2. Uruchomic Watchdoga									- Done (prawie przetestowane)
+3. Uruchomic ADC										- do przetesowania
+4. Uruchomic sterowanie liniami otworz kufer, wlacz zasilanie			- Done (nie testowane)
+5. Pomiar naladowania baterii
+
+Flash 		64 KB
+RAM			20 KB
+TIMER		3+1
+SPI			2
+I2C			2
+USART		3
+USB			1
+CAN			1
+GPIO		37
+ADC			2 - 10 channels
+FREQ		72MHz
+VOLTAGE		2-3.6V
+TEMP		-40 to 85
+PACK		LQFP48
+
+
+
+http://www.st.com/content/ccc/resource/technical/document/datasheet/33/d4/6f/1d/df/0b/4c/6d/CD00161566.pdf/files/CD00161566.pdf/jcr:content/translations/en.CD00161566.pdf
+
+U[pienie modemu faktycznie zmniejsza pobór pradu do 1 mA, tel jest nadal w zasiegu jesli do niego zadzwonimi to prad wzrasta i mamy sygnal RING
+na UART (w dok. pisali ze port uart sie wylacza) a pozniej znowy przechodzi do obnizonego poziomu mocy (1 mA).
+Nie wiem jak wyglada sprawa z TCP i GPRS ale TCP chyba odlaczone
+
+GPS traci na chwile pozycje
