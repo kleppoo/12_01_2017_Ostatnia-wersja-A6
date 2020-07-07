@@ -23,7 +23,7 @@ linia trzeba przelutowac do pinu obok na plytce od modemu
 5. Pomiar naladowania baterii
 
 Flash 		64 KB
-RAM			20 KB
+RAM			20 KBdfgdfgdfg
 TIMER		3+1
 SPI			2
 I2C			2
